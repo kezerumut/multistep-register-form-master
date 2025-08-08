@@ -10,32 +10,9 @@
       type="image/x-icon"
       sizes="96x96"
     />
+    <link rel="stylesheet" href="style.css" />
 
     <title>Multi-step Register Form | devChallenges.io</title>
-
-    <!--You are welcome to delete these styles or modify them in your own stylesheet -->
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        height: 100vh;
-      }
-
-      .author-info {
-        font-size: 14px;
-        text-align: center;
-        margin-top: 16px;
-        color: rgb(55, 65, 81);
-      }
-
-      .author-info a {
-        text-decoration: none;
-      }
-    </style>
   </head>
   <body>
     <!-- 
@@ -76,11 +53,67 @@
     Step 3 of 3
      -->
 
+    <div class="container" id="step-1">
+      <h1>Register</h1>
+      <form>
+        <div class="step-name">
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+        <button class="button-continue">Continue</button>
+      </form>
+    </div>
+    <div class="container" id="step-2">
+      <h1>Which Topic you are interested in?</h1>
+      <form>
+        <div class="buttons-interest">
+          <button>Software Development</button>
+          <button>User Experience</button>
+          <button>Graphic Design</button>
+        </div>
+        <button class="button-continue">Continue</button>
+      </form>
+    </div>
+    <div class="container" id="step-3">
+      <h1>Register</h1>
+      <form>
+        <div class="step-name">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Enter your name" required />
+        </div>
+        <div class="step-email">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+        <button class="button-continue">Continue</button>
+      </form>
+    </div>
+    <select
+    id="stepSelector"
+    style="margin: 32px auto 0 auto; width: 200px; display: block"
+  >
+    <option value="step-1">Adım 1</option>
+    <option value="step-2">Adım 2</option>
+    <option value="step-3">Adım 3</option>
+
     <div class="author-info">
-      Coded by <a href="#">Your Name Here</a> | Challenge by
+      Coded by <a href="#">KezerUmut</a> | Challenge by
       <a href="https://www.devchallenges.io?ref=challenge" target="_blank"
         >devChallenges.io</a
       >.
     </div>
+    
+    <script src="script.js"></script>
   </body>
+  
+  </select>
 </html>
