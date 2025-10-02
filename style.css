@@ -36,6 +36,7 @@ body {
   max-width: 900px;
   width: 90vw;
   margin: 0 auto;
+  position: relative;
 }
 .step step-1 {
   display: flex;
@@ -117,4 +118,75 @@ body {
 
 .button-continue:hover {
   background: linear-gradient(90deg, #a178e7 0%, #845eee 100%);
+}
+
+/* Step 2 özel stilleri */
+#step-2 .buttons-interest {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+#step-2 .buttons-interest button {
+  background: #23283b;
+  color: #ecedf0;
+  border: none;
+  border-radius: 12px;
+  padding: 18px 24px;
+  font-size: 18px;
+  margin: 0;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  outline: none;
+  box-shadow: none;
+}
+#step-2 .buttons-interest button.selected {
+  background: #845eee;
+  color: #fff;
+  box-shadow: 0 0 0 2px #845eee;
+}
+#step-2 .buttons-interest button:hover {
+  background: #845eee;
+  color: #fff;
+  box-shadow: 0 0 0 2px #845eee;
+}
+#step-2 .button-continue {
+  margin-top: 24px;
+}
+
+/* Step-indicator ortalama ve stil */
+.step-indicator {
+  position: absolute;
+  left: 0;
+  bottom: 32px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: #ecedf0;
+  font-size: 16px;
+  padding-left: 0;
+}
+.step-text {
+  margin-bottom: 0;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: left;
+  margin-right: 24px;
+}
+.step-dot {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #3a4151;
+  margin: 0 8px;
+  opacity: 0.5;
+  box-shadow: 0 0 0 4px rgba(132, 94, 238, 0.12);
+}
+.step-dot.active {
+  background: #845eee;
+  opacity: 1;
+  box-shadow: 0 0 0 4px rgba(132, 94, 238, 0.25);
 }
